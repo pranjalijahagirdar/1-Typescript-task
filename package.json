@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^4.9.5"
+  },
+  "name": "1)typescript-task",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -2,42 +2,23 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const cl = console.log;
 // 1
-// let student1 = {
-//     id: 101,
-//     name: "Rahul",
-//     age: 22,
-//     course: "Angular",
-//     isActive: true
-// }
-// let student1:{
-//     id:number;
-//     name:string;
-//     age:number;
-//     course:string;
-//     isActive:boolean;
-// }
-//  var student1:{
-//     id: number;
-//     name: string;
-//     age: number;
-//     course: string;
-//     isActive: boolean;
-// } = {
-//     id: 101,
-//     name: "Rahul",
-//     age: 22,
-//     course: "Angular",
-//     isActive: true
-// };
-// cl(student1);
+let student1 = {
+    id: 101,
+    name: "Rahul",
+    age: 22,
+    course: "Angular",
+    isActive: true
+};
+cl(student1);
 // 2
 let employee1 = {
     empId: 201,
     name: "Amit",
     salary: 45000,
-    department: "IT", // possible values: "IT", "HR", "Finance", "Marketing"
+    department: "IT",
     isPermanent: true
 };
+;
 cl(employee1);
 // 3
 let book1 = {
@@ -53,7 +34,7 @@ let mobile1 = {
     brand: "Samsung",
     model: "Galaxy S25",
     price: 75000,
-    color: "Black", // possible values: "Black", "White", "Blue", "Silver"
+    color: "Black",
     storage: 256
 };
 // 5
@@ -78,7 +59,7 @@ cl(laptop1);
 let movie1 = {
     title: "Dangal",
     rating: 8.5,
-    language: "Hindi", // possible values: "Hindi", "English", "Marathi", "Tamil"
+    language: "Hindi",
     releaseYear: 2016,
     isReleased: true
 };
@@ -88,7 +69,7 @@ let account1 = {
     accountNumber: 123456,
     holderName: "Rohit",
     balance: 50000,
-    accountType: "Savings", // possible values: "Savings", "Current", "Salary"
+    accountType: "Savings",
     isActive: true
 };
 cl(account1);
@@ -105,7 +86,7 @@ let vehicle1 = {
     brand: "Hyundai",
     model: "Creta",
     price: 1500000,
-    fuelType: "Petrol", // possible values: "Petrol", "Diesel", "Electric", "CNG", "Hybrid"
+    fuelType: "Petrol",
     isAvailable: true
 };
 cl(vehicle1);
@@ -122,7 +103,7 @@ cl(teacher1);
 let order1 = {
     orderId: 1001,
     amount: 2500,
-    status: "Pending", // possible values: "Pending", "Confirmed", "Delivered", "Cancelled"
+    status: "Pending",
     paymentMode: "UPI" // possible values: "Cash", "UPI", "Card", "NetBanking"
 };
 cl(order1);
@@ -130,7 +111,7 @@ cl(order1);
 let user1 = {
     username: "rahul123",
     email: "rahul@example.com",
-    role: "BUYER", // possible values: "ADMIN", "SUPER_ADMIN", "BUYER"
+    role: "BUYER",
     isVerified: true
 };
 cl(user1);
@@ -139,7 +120,7 @@ let product1 = {
     id: 501,
     name: "Keyboard",
     price: 1500,
-    color: "Black", // possible values: "Black", "White", "Blue"
+    color: "Black",
     quantity: 10,
     category: "Electronics" // possible values: "Electronics", "Fashion", "Sports", "Beauty"
 };
@@ -148,7 +129,7 @@ cl(product1);
 let attendance1 = {
     employeeName: "Vikas",
     date: "2026-10-23",
-    status: "Present", // possible values: "Present", "Absent", "Leave"
+    status: "Present",
     workingHours: 8
 };
 cl(attendance1);
@@ -156,7 +137,7 @@ cl(attendance1);
 let shoppingUser1 = {
     id: 101,
     name: "Aakash",
-    role: "BUYER", // possible values: "ADMIN", "BUYER", "SELLER"
+    role: "BUYER",
     address: {
         city: "Pune",
         state: "Maharashtra",
@@ -196,8 +177,8 @@ cl(cartItem1);
 let payment1 = {
     transactionId: "TXN1001",
     amount: 5000,
-    mode: "UPI", // possible values: "CASH", "UPI", "CARD", "NET_BANKING"
-    status: "SUCCESS", // possible values: "SUCCESS", "FAILED", "PENDING"
+    mode: "UPI",
+    status: "SUCCESS",
     date: "2026-10-20"
 };
 cl(payment1);
@@ -206,7 +187,7 @@ let patient1 = {
     patientId: 301,
     name: "Suresh",
     age: 45,
-    status: "UNDER_TREATMENT", // possible values: "ADMITTED", "DISCHARGED", "UNDER_TREATMENT"
+    status: "UNDER_TREATMENT",
     doctor: {
         name: "Dr. Mehta",
         specialization: "Cardiology"
@@ -218,7 +199,7 @@ let libraryBook1 = {
     id: 501,
     title: "Clean Code",
     author: "Robert Martin",
-    status: "AVAILABLE", // possible values: "AVAILABLE", "ISSUED", "LOST"
+    status: "AVAILABLE",
     tags: ["Programming", "Software Design"]
 };
 cl(libraryBook1);
@@ -271,7 +252,7 @@ cl(studentResult1);
 // 27
 let property1 = {
     propertyId: 201,
-    type: "Flat", // possible values: "Flat", "House", "Plot"
+    type: "Flat",
     price: 4500000,
     area: 1000,
     location: {
@@ -295,7 +276,7 @@ cl(socialPost1);
 let insurance1 = {
     policyNumber: "POL1001",
     holderName: "Mahesh",
-    type: "HEALTH", // possible values: "LIFE", "HEALTH", "VEHICLE"
+    type: "HEALTH",
     premium: 12000,
     coverage: 500000,
     nominee: "Sunita"
@@ -320,7 +301,7 @@ cl(enrollment1);
 let vehicleService1 = {
     serviceId: 301,
     vehicleNumber: "MH12AB1234",
-    serviceType: "GENERAL", // possible values: "GENERAL", "REPAIR", "OIL_CHANGE"
+    serviceType: "GENERAL",
     cost: 5000,
     partsUsed: [
         { name: "Oil Filter", price: 500 },
@@ -333,7 +314,7 @@ let onlineExam1 = {
     examId: 901,
     studentName: "Kavita",
     durationMinutes: 60,
-    status: "NOT_STARTED", // possible values: "NOT_STARTED", "IN_PROGRESS", "SUBMITTED"
+    status: "NOT_STARTED",
     questions: [
         {
             question: "What is TypeScript?",
@@ -347,7 +328,7 @@ cl(onlineExam1);
 let project1 = {
     projectId: 1001,
     projectName: "HRMS",
-    status: "ACTIVE", // possible values: "PLANNED", "ACTIVE", "COMPLETED"
+    status: "ACTIVE",
     teamMembers: [
         { name: "Amit", role: "Developer" },
         { name: "Priya", role: "Tester" }
@@ -358,7 +339,7 @@ cl(project1);
 // 34
 let subscription1 = {
     userId: 101,
-    plan: "PREMIUM", // possible values: "FREE", "BASIC", "PREMIUM"
+    plan: "PREMIUM",
     startDate: "2026-10-01",
     endDate: "2027-10-01",
     autoRenew: true
@@ -393,10 +374,11 @@ let ecomOrder1 = {
         state: "Maharashtra",
         pincode: 411001
     },
-    orderStatus: "CONFIRMED", // possible values: "PLACED", "CONFIRMED", "SHIPPED", "DELIVERED", "RETURNED"
-    paymentStatus: "PAID", // possible values: "PENDING", "PAID", "REFUNDED"
+    orderStatus: "CONFIRMED",
+    paymentStatus: "PAID",
     couponCode: "SAVE10"
 };
+;
 cl(ecomOrder1);
 // 37
 let instituteStudent1 = {
@@ -428,8 +410,8 @@ let machineTest1 = {
         name: "Rahul"
     },
     facultyName: "Amit",
-    status: "COMPLETED_AND_EXPLAINED", // possible values: "NOT_ATTENDED", "ATTENDED", "NOT_COMPLETED", "COMPLETED_NOT_EXPLAINED", "COMPLETED_AND_EXPLAINED"
-    performance: "VERY_GOOD", // possible values: "VERY_POOR", "POOR", "GOOD", "VERY_GOOD", "EXCELLENT"
+    status: "COMPLETED_AND_EXPLAINED",
+    performance: "VERY_GOOD",
     score: 85,
     totalMarks: 100,
     feedback: "Good understanding of interfaces",
@@ -465,7 +447,7 @@ let loanApplication1 = {
         employmentType: "SALARIED" // possible values: "SALARIED", "SELF_EMPLOYED"
     },
     loan: {
-        type: "HOME", // possible values: "HOME", "PERSONAL", "EDUCATION"
+        type: "HOME",
         requestedAmount: 2500000,
         tenureYears: 20,
         interestRate: 8.5
@@ -487,7 +469,7 @@ let apiResponse1 = {
             {
                 id: 1,
                 name: "Ravi",
-                role: "ADMIN", // possible values: "ADMIN", "USER", "MANAGER"
+                role: "ADMIN",
                 permissions: ["READ", "WRITE", "DELETE"]
             },
             {
@@ -516,8 +498,8 @@ let projectTask1 = {
             taskId: 1,
             title: "Create Login API",
             assignedTo: { id: 10, name: "Amit" },
-            priority: "HIGH", // possible values: "LOW", "MEDIUM", "HIGH", "CRITICAL"
-            status: "IN_PROGRESS", // possible values: "TODO", "IN_PROGRESS", "IN_REVIEW", "DONE"
+            priority: "HIGH",
+            status: "IN_PROGRESS",
             dueDate: "2026-11-01"
         },
         {
@@ -531,7 +513,7 @@ let projectTask1 = {
         }
     ]
 };
-cl(projectTask1);
+;
 // 43
 let hotelBooking1 = {
     bookingId: "HB1001",
@@ -578,13 +560,14 @@ let advancedCart1 = {
         }
     ],
     discount: {
-        type: "PERCENTAGE", // possible values: "PERCENTAGE", "FIXED"
+        type: "PERCENTAGE",
         value: 10,
         couponCode: "SAVE10"
     },
     shippingFee: 50,
     currency: "INR" // possible values: "INR", "USD"
 };
+;
 cl(advancedCart1);
 // 45
 let authSession1 = {
@@ -595,7 +578,7 @@ let authSession1 = {
         role: "SUPER_ADMIN" // possible values: "ADMIN", "SUPER_ADMIN", "USER"
     },
     authentication: {
-        provider: "LOCAL", // possible values: "LOCAL", "GOOGLE", "GITHUB"
+        provider: "LOCAL",
         accessToken: "sample-access-token",
         expiresIn: 3600,
         twoFactorEnabled: true
@@ -611,7 +594,6 @@ let authSession1 = {
     lastPasswordChange: "2026-09-01"
 };
 cl(authSession1);
-// 46
 let insuranceClaim1 = {
     claimId: "CL1001",
     policyNumber: "POL1001",
@@ -632,181 +614,184 @@ let insuranceClaim1 = {
     ],
     status: "DOCUMENTS_REQUIRED" // possible values: "SUBMITTED", "DOCUMENTS_REQUIRED", "APPROVED", "REJECTED", "SETTLED"
 };
-// 47
-// let transaction1 = {
-//     transactionId: "TX5001",
-//     type: "TRANSFER", // possible values: "CREDIT", "DEBIT", "TRANSFER"
-//     amount: {
-//         value: 10000,
-//         currency: "INR" // possible values: "INR", "USD", "EUR", "GBP"
-//     },
-//     sender: {
-//         accountId: "ACC101",
-//         name: "Amit"
-//     },
-//     receiver: {
-//         accountId: "ACC202",
-//         name: "Rahul"
-//     },
-//     timestamp: "2026-10-23T10:30:00",
-//     metadata: {
-//         source: "Internet Banking",
-//         referenceId: "REF1001"
-//     }
-// };
-// 48
-// let hrmsEmployee1 = {
-//     employeeId: "EMP1001",
-//     personalDetails: {
-//         firstName: "Amit",
-//         lastName: "Sharma",
-//         dateOfBirth: "1995-05-15",
-//         contact: {
-//             email: "amit@example.com",
-//             phone: "9876543210"
-//         },
-//         address: {
-//             current: "Pune, Maharashtra",
-//             permanent: "Udgir, Maharashtra"
-//         }
-// },
-// employmentDetails: {
-//     department: "IT",
-//     designation: "Software Developer",
-//     joiningDate: "2025-01-10",
-//     status: "ACTIVE", // possible values: "PROBATION", "ACTIVE", "NOTICE_PERIOD", "RESIGNED"
-//     previousExperience: 2
-// },
-// compensation: {
-//     annualCTC: 600000,
-//     monthlyGross: 50000,
-//     salaryComponents: [
-//         { name: "Basic", amount: 25000 },
-//         { name: "HRA", amount: 15000 },
-//         { name: "Allowance", amount: 10000 }
-//     ]
-// },
-// documents: [
-//     {
-//         documentType: "PAN",
-//         fileName: "pan.pdf",
-//         uploadedAt: "2025-01-10",
-//         verified: true
-//     },
-//         {
-//             documentType: "Degree Certificate",
-//             fileName: "degree.pdf",
-//             uploadedAt: "2025-01-10",
-//             verified: false
-//         }
-//     ]
-// };
-// 49
-// let batchReport1 = {
-//     batch: {
-//         batchId: 10,
-//         batchName: "Angular Evening",
-//         faculty: "Amit",
-//         students: [
-//             { studentId: 1, name: "Rahul", email: "rahul@example.com" },
-//             { studentId: 2, name: "Priya", email: "priya@example.com" }
-//         ]
-//     },
-//     test: {
-//         testId: 501,
-//         title: "TypeScript Interfaces",
-//         date: "2026-10-20",
-//         totalMarks: 100,
-//         technologies: ["TypeScript", "JavaScript"]
-//     },
-//     results: [
-//         {
-//             studentId: 1,
-//             attendance: "ATTENDED", // possible values: "ATTENDED", "ABSENT"
-//             score: 85,
-//             performance: "VERY_GOOD", // possible values: "VERY_POOR", "POOR", "GOOD", "VERY_GOOD", "EXCELLENT"
-//             codeCompleted: true,
-//             explainedToFaculty: true,
-//             feedback: "Good problem-solving"
-//         },
-//         {
-//             studentId: 2,
-//             attendance: "ABSENT",
-//             codeCompleted: false,
-//             explainedToFaculty: false
-//         }
-//     ],
-//     summary: {
-//         totalStudents: 2,
-//         attended: 1,
-//         absent: 1,
-//         averageScore: 85
-//     }
-// };
-// 50
-// let completeProduct1 = {
-//     id: "PRD1001",
-//     name: "Smart Watch",
-//     description: "Fitness tracking smart watch",
-//     category: {
-//         id: 10,
-//         name: "Electronics",
-//         parentCategory: "Wearables"
-//     },
-//     pricing: {
-//         basePrice: 5000,
-//         sellingPrice: 3999,
-//         taxPercentage: 18,
-//         currency: "INR", // possible values: "INR", "USD"
-//         discount: {
-//             type: "PERCENTAGE", // possible values: "PERCENTAGE", "FIXED"
-//             value: 20,
-//             validUntil: "2026-12-31"
-//         }
-//     },
-// inventory: {
-//     sku: "WATCH-BLK-001",
-//     stock: 25,
-//     warehouseId: 101,
-//     status: "IN_STOCK" // possible values: "IN_STOCK", "LOW_STOCK", "OUT_OF_STOCK"
-// },
-// specifications: [
-//     { name: "BatteryLife", value: "7 days" },
-//     { name: "WaterResistant", value: true },
-//     { name: "DisplaySize", value: 1.8 }
-// ],
-// variants: [
-//     {
-//         variantId: "VAR001",
-//         color: "Black", // possible values: "Black", "Blue", "White"
-//         priceAdjustment: 0,
-//         available: true
-//     },
-//     {
-//         variantId: "VAR002",
-//         color: "Blue",
-//         priceAdjustment: 200,
-//         available: true
-//     }
-//     ],
-//     shipping: {
-//         methods: ["STANDARD", "EXPRESS"], // possible values: "STANDARD", "EXPRESS", "SAME_DAY"
-//         returnable: true,
-//         returnDays: 7
-//     },
-//     reviews: [
-//         {
-//             userId: 201,
-//             rating: 5,
-//             comment: "Excellent product",
-//             date: "2026-10-20"
-//         },
-//         {
-//             userId: 202,
-//             rating: 4,
-//             date: "2026-10-21"
-//         }
-//     ],
-//     lifecycle: "ACTIVE" // possible values: "DRAFT", "ACTIVE", "DISCONTINUED"
-// };
+cl(insuranceClaim1);
+;
+let transaction1 = {
+    transactionId: "TX5001",
+    type: "TRANSFER",
+    amount: {
+        value: 10000,
+        currency: "INR" // possible values: "INR", "USD", "EUR", "GBP"
+    },
+    sender: {
+        accountId: "ACC101",
+        name: "Amit"
+    },
+    receiver: {
+        accountId: "ACC202",
+        name: "Rahul"
+    },
+    timestamp: "2026-10-23T10:30:00",
+    metadata: {
+        source: "Internet Banking",
+        referenceId: "REF1001"
+    }
+};
+cl(transaction1);
+;
+let hrmsEmployee1 = {
+    employeeId: "EMP1001",
+    personalDetails: {
+        firstName: "Amit",
+        lastName: "Sharma",
+        dateOfBirth: "1995-05-15",
+        contact: {
+            email: "amit@example.com",
+            phone: "9876543210"
+        },
+        address: {
+            current: "Pune, Maharashtra",
+            permanent: "Udgir, Maharashtra"
+        }
+    },
+    employmentDetails: {
+        department: "IT",
+        designation: "Software Developer",
+        joiningDate: "2025-01-10",
+        status: "ACTIVE",
+        previousExperience: 2
+    },
+    compensation: {
+        annualCTC: 600000,
+        monthlyGross: 50000,
+        salaryComponents: [
+            { name: "Basic", amount: 25000 },
+            { name: "HRA", amount: 15000 },
+            { name: "Allowance", amount: 10000 }
+        ]
+    },
+    documents: [
+        {
+            documentType: "PAN",
+            fileName: "pan.pdf",
+            uploadedAt: "2025-01-10",
+            verified: true
+        },
+        {
+            documentType: "Degree Certificate",
+            fileName: "degree.pdf",
+            uploadedAt: "2025-01-10",
+            verified: false
+        }
+    ]
+};
+cl(hrmsEmployee1);
+let batchReport1 = {
+    batch: {
+        batchId: 10,
+        batchName: "Angular Evening",
+        faculty: "Amit",
+        students: [
+            { studentId: 1, name: "Rahul", email: "rahul@example.com" },
+            { studentId: 2, name: "Priya", email: "priya@example.com" }
+        ]
+    },
+    test: {
+        testId: 501,
+        title: "TypeScript Interfaces",
+        date: "2026-10-20",
+        totalMarks: 100,
+        technologies: ["TypeScript", "JavaScript"]
+    },
+    results: [
+        {
+            studentId: 1,
+            attendance: "ATTENDED",
+            score: 85,
+            performance: "VERY_GOOD",
+            codeCompleted: true,
+            explainedToFaculty: true,
+            feedback: "Good problem-solving"
+        },
+        {
+            studentId: 2,
+            attendance: "ABSENT",
+            codeCompleted: false,
+            explainedToFaculty: false
+        }
+    ],
+    summary: {
+        totalStudents: 2,
+        attended: 1,
+        absent: 1,
+        averageScore: 85
+    }
+};
+cl(batchReport1);
+let completeProduct1 = {
+    id: "PRD1001",
+    name: "Smart Watch",
+    description: "Fitness tracking smart watch",
+    category: {
+        id: 10,
+        name: "Electronics",
+        parentCategory: "Wearables"
+    },
+    pricing: {
+        basePrice: 5000,
+        sellingPrice: 3999,
+        taxPercentage: 18,
+        currency: "INR",
+        discount: {
+            type: "PERCENTAGE",
+            value: 20,
+            validUntil: "2026-12-31"
+        }
+    },
+    inventory: {
+        sku: "WATCH-BLK-001",
+        stock: 25,
+        warehouseId: 101,
+        status: "IN_STOCK" // possible values: "IN_STOCK", "LOW_STOCK", "OUT_OF_STOCK"
+    },
+    specifications: [
+        { name: "BatteryLife", value: "7 days" },
+        { name: "WaterResistant", value: true },
+        { name: "DisplaySize", value: 1.8 }
+    ],
+    variants: [
+        {
+            variantId: "VAR001",
+            color: "Black",
+            priceAdjustment: 0,
+            available: true
+        },
+        {
+            variantId: "VAR002",
+            color: "Blue",
+            priceAdjustment: 200,
+            available: true
+        }
+    ],
+    shipping: {
+        methods: ["STANDARD", "EXPRESS"],
+        returnable: true,
+        returnDays: 7
+    },
+    reviews: [
+        {
+            userId: 201,
+            rating: 5,
+            comment: "Excellent product",
+            date: "2026-10-20"
+        },
+        {
+            userId: 202,
+            rating: 4,
+            date: "2026-10-21"
+        }
+    ],
+    lifecycle: "ACTIVE" // possible values: "DRAFT", "ACTIVE", "DISCONTINUED"
+};
+cl(completeProduct1);
 //# sourceMappingURL=test.js.map

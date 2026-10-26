@@ -1,45 +1,32 @@
 const cl=console.log;
 
 // 1
-// let student1 = {
-//     id: 101,
-//     name: "Rahul",
-//     age: 22,
-//     course: "Angular",
-//     isActive: true
-// }
-// let student1:{
-//     id:number;
-//     name:string;
-//     age:number;
-//     course:string;
-//     isActive:boolean;
-// }
-//  var student1:{
-//     id: number;
-//     name: string;
-//     age: number;
-//     course: string;
-//     isActive: boolean;
-// } = {
-//     id: 101,
-//     name: "Rahul",
-//     age: 22,
-//     course: "Angular",
-//     isActive: true
-// };
+let student1 :student= {
+    id: 101,
+    name: "Rahul",
+    age: 22,
+    course: "Angular",
+    isActive: true
+}
+interface student{
+    id:number;
+    name:string;
+    age:number;
+    course:string;
+    isActive:boolean;
+}
 
-// cl(student1);
+cl(student1);
 
 // 2
-let employee1:employee1 = {
+let employee1:employee = {
     empId: 201,
     name: "Amit",
     salary: 45000,
     department: "IT", // possible values: "IT", "HR", "Finance", "Marketing"
     isPermanent: true
 };
-type employee1 ={
+interface employee {
     empId:number;
     name:string;
     salary:number;
@@ -47,6 +34,7 @@ type employee1 ={
     isPermanent:boolean;
 };
 cl(employee1)
+
 
 // 3
 let book1 : book1= {
@@ -57,7 +45,7 @@ let book1 : book1= {
     isAvailable: true
 };
 
-type book1={
+interface book1{
     id:number;
     title:string;
     author:string;
@@ -74,7 +62,7 @@ let mobile1 :mobile1 = {
     storage: 256
 };
 
-type mobile1={
+interface mobile1{
     brand:string;
     model:string;
     price:number;
@@ -90,7 +78,7 @@ let customer1:customer1 = {
     city: "Pune",
     isVerified: true
 };
-type customer1={
+interface customer1{
     id:number;
     name:string;
     email:string;
@@ -107,7 +95,7 @@ let laptop1:laptop1 = {
     price: 65000,
     inStock: true
 };
-type laptop1={
+interface laptop1{
     brand:string;
     ram:number;
     storage:number;
@@ -124,7 +112,7 @@ let movie1:movie1 = {
     releaseYear: 2016,
     isReleased: true
 };
-type movie1={
+interface movie1{
     title:string;
     rating:number;
     language:"Hindi"|"English"|"Marathi"|"Tamil";
@@ -141,7 +129,7 @@ let account1:account1 = {
     isActive: true
 };
 
-type account1={
+interface account1{
     accountNumber:number;
     holderName:string;
     balance:number;
@@ -158,7 +146,7 @@ let course1:course1 = {
     technologies: ["MongoDB", "Express", "Angular", "Node.js"]
 };
 
-type course1 = {
+interface course1 {
     courseName:string;
     duration:number;
     fees:number;
@@ -175,8 +163,7 @@ let vehicle1:vehicle1 = {
     fuelType: "Petrol", // possible values: "Petrol", "Diesel", "Electric", "CNG", "Hybrid"
     isAvailable: true
 };
-
-type vehicle1={
+interface vehicle1{
     brand:string;
     model:string;
     price:number;
@@ -194,7 +181,7 @@ let teacher1 : teacher1 = {
     skills: ["JavaScript", "TypeScript", "Angular"]
 };
 
-type teacher1={
+interface teacher1{
     id:number;
     name:string;
     subject:string;
@@ -210,7 +197,7 @@ let order1 = {
     status: "Pending", // possible values: "Pending", "Confirmed", "Delivered", "Cancelled"
     paymentMode: "UPI" // possible values: "Cash", "UPI", "Card", "NetBanking"
 };
-type order1={
+interface order1{
     orderId:number;
     amount:number;
     status:"Pending"|"Confirmed"|"Delivered"|"Cancelled";
@@ -226,7 +213,7 @@ let user1:user1 = {
     role: "BUYER", // possible values: "ADMIN", "SUPER_ADMIN", "BUYER"
     isVerified: true
 };
-type user1={
+interface user1{
     username:string;
     email:string;
     role:"BUYER"|"ADMIN"|"SUPER_ADMIN";
@@ -243,7 +230,7 @@ let product1 : product1= {
     quantity: 10,
     category: "Electronics" // possible values: "Electronics", "Fashion", "Sports", "Beauty"
 };
-type product1={
+interface product1{
     id:number;
     name:string;
     price:number;
@@ -261,7 +248,7 @@ let attendance1:attendance1 = {
     status: "Present", // possible values: "Present", "Absent", "Leave"
     workingHours: 8
 };
-type attendance1={
+interface attendance1{
     employeeName:string;
     date:string;
     status:"Present"|"Absent"|"Leave";
@@ -281,7 +268,7 @@ let shoppingUser1:shoppingUser1 = {
         pincode: 411001
     }
 };
-type shoppingUser1={
+interface shoppingUser1{
     id:number;
     name:string;
     role:"BUYER"|"ADMIN"|"SELLER";
@@ -302,7 +289,7 @@ let inventory1:inventory1 = {
     stock: 5,
     status: "LOW_STOCK", // possible values: "IN_STOCK", "LOW_STOCK", "OUT_OF_STOCK"
 };
-type inventory1={
+interface inventory1{
     productId:number;
     name:string;
     price:number;
@@ -321,7 +308,7 @@ let employeeProfile1:employeeProfile1 = {
     skills: ["Angular", "RxJS", "TypeScript"],
     experience: 3
 };
-type employeeProfile1={
+interface employeeProfile1{
     id:number;
     name:string;
     email:string;
@@ -340,7 +327,7 @@ let cartItem1:cartItem1 = {
     quantity: 2,
     discount: 10
 };
-type cartItem1={
+interface cartItem1{
     productId:number;
     productName:string;
     price:number;
@@ -358,7 +345,7 @@ let payment1 : payment1 = {
     status: "SUCCESS", // possible values: "SUCCESS", "FAILED", "PENDING"
     date: "2026-10-20"
 };
-type payment1={
+interface payment1{
     transactionId:string;
     amount:number;
     mode:"UPI"|"CASH"|"CARD"|"NET_BANKING";
@@ -379,7 +366,7 @@ let patient1 : patient1 = {
         specialization: "Cardiology"
     }
 };
-type patient1={
+interface patient1{
     patientId:number;
     name:string;
     age:number;
@@ -400,7 +387,7 @@ let libraryBook1:libraryBook1 = {
     status: "AVAILABLE", // possible values: "AVAILABLE", "ISSUED", "LOST"
     tags: ["Programming", "Software Design"]
 };
-type libraryBook1={
+interface libraryBook1{
     id:number;
     title:string;
     author:string;
@@ -418,7 +405,7 @@ let foodOrder1:foodOrder1 = {
     totalAmount: 650,
     status: "PREPARING", // possible values: "PLACED", "PREPARING", "READY", "DELIVERED"
 };
-type foodOrder1={
+interface foodOrder1{
     orderId:number;
     customerName:string;
     items:("Pizza"|"Burger"|"Juice")[];
@@ -441,7 +428,7 @@ let department1:department1 = {
         { id: 2, name: "Simran", salary: 45000 }
     ]
 };
-type department1={
+interface department1{
     departmentId:number;
     name:string;
     manager:{
@@ -466,7 +453,7 @@ let travelBooking1 = {
     travelDate: "2026-11-10",
     status: "BOOKED", // possible values: "BOOKED", "CANCELLED", "COMPLETED"
 };
-type travelBooking1={
+interface travelBooking1{
     bookingId:string;
     passengerName:string;
     source:string;
@@ -488,7 +475,7 @@ let studentResult1:studentResult1 = {
     percentage: 84.33,
     result: "PASS" // possible values: "PASS", "FAIL", "ATKT"
 };
-type studentResult1={
+interface studentResult1{
     studentId:number;
     name:string;
     marks:{
@@ -513,7 +500,7 @@ let property1:property = {
     },
     status: "Available" // possible values: "Available", "Sold", "Rented"
 };
-type property={
+interface property{
     propertyId:number;
     type:"Flat"|"House"|"Plot";
     price:number;
@@ -536,7 +523,7 @@ let socialPost1:socialPost1 = {
     comments: ["Great", "Keep learning"],
     visibility: "PUBLIC" // possible values: "PUBLIC", "PRIVATE", "FRIENDS"
 };
-type socialPost1={
+interface socialPost1{
     postId:number;
     author:string;
     content:string;
@@ -556,7 +543,7 @@ let insurance1:insurance1 = {
     coverage: 500000,
     nominee: "Sunita"
 };
-type insurance1={
+interface insurance1{
     policyNumber:string;
     holderName:string;
     type:"LIFE"|"HEALTH"|"VEHICLE";
@@ -581,7 +568,7 @@ let enrollment1 : enrollment= {
     },
     status: "ENROLLED", // possible values: "ENROLLED", "COMPLETED", "DROPPED"
 };
-type enrollment={
+interface enrollment{
     enrollmentId:number;
     student:{
         id:number;
@@ -608,7 +595,7 @@ let vehicleService1:vehicleService = {
         { name: "Engine Oil", price: 1500 }
     ]
 };
-type vehicleService={
+interface vehicleService{
     serviceId:number;
     vehicleNumber:string;
     serviceType:"GENERAL"|"REPAIR"|"OIL_CHANGE";
@@ -635,7 +622,7 @@ let onlineExam1:onlineExam = {
         }
     ]
 };
-type onlineExam={
+interface onlineExam{
     examId:number;
     studentName:string;
     durationMinutes:number;
@@ -660,7 +647,7 @@ let project1:project = {
     ],
     technologies: ["Angular", "Node.js", "MongoDB"]
 };
-type project={
+interface project{
     projectId:number;
     projectName:string;
     status:"PLANNED"|"ACTIVE"|"COMPLETED";
@@ -681,7 +668,7 @@ let subscription1:subscription = {
     endDate: "2027-10-01",
     autoRenew: true
 };
-type subscription={
+interface subscription{
     userId:number;
     plan:"FREE"|"BASIC"|"PREMIUM";
     startDate:string;
@@ -700,7 +687,7 @@ let warehouse1:warehouse = {
         { productId: 102, name: "Monitor", quantity: 3, reorderLevel: 10 }
     ]
 };
-type warehouse={
+interface warehouse{
     warehouseId:number;
     name:string;
     location:string;
@@ -714,7 +701,7 @@ type warehouse={
 cl(warehouse1)
 
 // 36
-let ecomOrder1 = {
+let ecomOrder1 : ecomOrder= {
     orderId: "ORD1001",
     customer: {
         id: 101,
@@ -735,7 +722,7 @@ let ecomOrder1 = {
     paymentStatus: "PAID", // possible values: "PENDING", "PAID", "REFUNDED"
     couponCode: "SAVE10"
 };
-type EcomOrder={
+interface ecomOrder{
     orderId:string;
     customer:{
         id:number;
@@ -754,7 +741,7 @@ type EcomOrder={
         state:string;
         pincode:number;
     };
-    oorderStatus:"PLACED"|"CONFIRMED"|"SHIPPED"|"DELIVERED"|"RETURNED";
+    orderStatus:"PLACED"|"CONFIRMED"|"SHIPPED"|"DELIVERED"|"RETURNED";
     paymentStatus:"PENDING"|"PAID"|"REFUNDED";
     couponCode:string;
 };
@@ -762,7 +749,7 @@ cl(ecomOrder1)
 
 // 37
 
-let instituteStudent1 = {
+let instituteStudent1 :instituteStudent= {
     studentId: 101,
     personalInfo: {
         fullName: "Aakash Patil",
@@ -781,7 +768,7 @@ let instituteStudent1 = {
     courses: ["JavaScript", "TypeScript", "Angular"],
     status: "ACTIVE" // possible values: "ACTIVE", "INACTIVE", "PLACED"
 };
-type instituteStudent={
+interface instituteStudent{
     studentId:number;
     personalInfo:{
         fullName:string;
@@ -820,7 +807,7 @@ let machineTest1 : machineTest= {
     technologies: ["TypeScript", "JavaScript"]
 };
 
-type machineTest={
+interface machineTest{
     testId:number;
     testName:string;
     student:{
@@ -857,7 +844,7 @@ let payroll1:payroll = {
     status: "GENERATED" // possible values: "GENERATED", "PAID", "ON_HOLD"
 };
 
-type payroll={
+interface payroll{
     employee:{
         id:number;
         name:string;
@@ -899,7 +886,7 @@ let loanApplication1:loanApplication = {
     ],
     status: "UNDER_REVIEW" // possible values: "APPLIED", "UNDER_REVIEW", "APPROVED", "REJECTED"
 };
-type loanApplication={
+interface loanApplication{
     applicationId:string;
     applicant:{
         name:string;
@@ -950,18 +937,25 @@ let apiResponse1:apiResponse = {
     },
     error: null
 };
-type Role = "ADMIN"|"USER"|"MANAGER";
-type Permissions = ("READ"|"WRITE"|"DELETE")[];
-type apiResponse={
+
+interface apiResponse{
     success:boolean;
     message:string;
     data:{
-        users:{
+        users:[
+            {
             id:number;
             name:string;
             role:"ADMIN"|"USER"|"MANAGER";
-            permissions:Permissions;
-        }[]
+            permissions:string[];
+        },
+        {
+            id:number;
+            name:string;
+            role:string;
+            permissions:string[];
+        }
+    ]
         pagination:{
             currentPage:number;
             pageSize:number;
@@ -969,13 +963,13 @@ type apiResponse={
             totalPages:number;
         }
     }
-    error:string | null;
+    error:null;
 }
 cl(apiResponse1)
 
 // 42
 
-let projectTask1 : ProjectTask= {
+let projectTask1 : projectTask= {
     projectId: 101,
     projectName: "HRMS",
     tasks: [
@@ -999,27 +993,29 @@ let projectTask1 : ProjectTask= {
     ]
 };
 
-type Priority= "LOW"|"MEDIUM"|"HIGH"|"CRITICAL";
-type TaskStatus = "TODO"|"IN_PROGRESS"|"IN_REVIEW"|"DONE";
-type AssignedTo={
-    id:number;
-    name:string;
-}
-type Task={
-    taskId:number;
-    title:string;
-    assignedTo:AssignedTo;
-    priority:Priority;
-    status:TaskStatus;
-    dueDate:string;
-    dependencies?:number[];
-}
-type ProjectTask={
+interface projectTask{
     projectId:number;
     projectName:string;
-    tasks:Task[];
-}
-cl(projectTask1)
+    tasks:[
+        {
+            taskId:number;
+            title:string;
+            assignedTo:{id:number, name:string},
+            priority:"LOW"|"MEDIUM"|"HIGH"|"CRITICAL";
+            status:"TODO"|"IN_PROGRESS"|"IN_REVIEW"|"DONE";
+            dueDate:string;
+        },
+        {
+            taskId:number;
+            title:string;
+            assignedTo:{id:number, name:string},
+            priority:string;
+            status:string;
+            dueDate:string;
+            dependencies:number[]
+        }
+    ]
+};
 
 // 43
 
@@ -1045,7 +1041,7 @@ let hotelBooking1:hotelBooking= {
     status: "RESERVED" // possible values: "RESERVED", "CHECKED_IN", "CHECKED_OUT", "CANCELLED"
 };
 
-type hotelBooking={
+interface hotelBooking{
     bookingId:string;
     guest:{
         name:string;
@@ -1100,7 +1096,7 @@ let advancedCart1 : advancedCart= {
     currency: "INR" // possible values: "INR", "USD"
 };
 
-type advancedCart={
+interface advancedCart{
     cartId:string;
     customerId:number;
     items:{
@@ -1148,7 +1144,8 @@ let authSession1:authSession = {
     ],
     lastPasswordChange: "2026-09-01"
 };
-type authSession={
+
+interface authSession{
      user: {
         id: number;
         username:string;
@@ -1173,204 +1170,411 @@ cl(authSession1)
 
 // 46
 
-// let insuranceClaim1 = {
-//     claimId: "CL1001",
-//     policyNumber: "POL1001",
-//     claimant: {
-//         name: "Rohit",
-//         relationship: "SELF" // possible values: "SELF", "SPOUSE", "CHILD", "PARENT"
-//     },
-//     claimAmount: 100000,
-//     approvedAmount: 80000,
-//     incident: {
-//         date: "2026-10-01",
-//         description: "Hospital admission",
-//         location: "Pune"
-//     },
-//     documents: [
-//         { name: "Medical Bills", verified: true },
-//         { name: "Discharge Summary", verified: false }
-//     ],
-//     status: "DOCUMENTS_REQUIRED" // possible values: "SUBMITTED", "DOCUMENTS_REQUIRED", "APPROVED", "REJECTED", "SETTLED"
-// };
+interface insuranceClaim{
+    claimId:string;
+    policyNumber:string;
+    claimant:{
+        name:string;
+        relationship:"SELF"|"SPOUSE"|"CHILD"|"PARENT";
+    },
+    claimAmount:number;
+    approvedAmount:number;
+    incident:{
+        date:string;
+        description:string;
+        location:string;
+    },
+    documents:[
+        {name:string, verified:boolean},
+        {name:String, verified:boolean}
+    ],
+    status:"SUBMITTED"|"DOCUMENTS_REQUIRED"|"APPROVED"|"REJECTED"|"SETTLED";  
+}
+
+let insuranceClaim1:insuranceClaim = {
+    claimId: "CL1001",
+    policyNumber: "POL1001",
+    claimant: {
+        name: "Rohit",
+        relationship: "SELF" // possible values: "SELF", "SPOUSE", "CHILD", "PARENT"
+    },
+    claimAmount: 100000,
+    approvedAmount: 80000,
+    incident: {
+        date: "2026-10-01",
+        description: "Hospital admission",
+        location: "Pune"
+    },
+    documents: [
+        { name: "Medical Bills", verified: true },
+        { name: "Discharge Summary", verified: false }
+    ],
+    status: "DOCUMENTS_REQUIRED" // possible values: "SUBMITTED", "DOCUMENTS_REQUIRED", "APPROVED", "REJECTED", "SETTLED"
+};
+cl(insuranceClaim1)
 
 // 47
-// let transaction1 = {
-//     transactionId: "TX5001",
-//     type: "TRANSFER", // possible values: "CREDIT", "DEBIT", "TRANSFER"
-//     amount: {
-//         value: 10000,
-//         currency: "INR" // possible values: "INR", "USD", "EUR", "GBP"
-//     },
-//     sender: {
-//         accountId: "ACC101",
-//         name: "Amit"
-//     },
-//     receiver: {
-//         accountId: "ACC202",
-//         name: "Rahul"
-//     },
-//     timestamp: "2026-10-23T10:30:00",
-//     metadata: {
-//         source: "Internet Banking",
-//         referenceId: "REF1001"
-//     }
-// };
+
+interface transaction{
+    transactionId:string;
+    type:"CREDIT"|"DEBIT"|"TRANSFER";
+    amount:{
+        value:number;
+        currency:"INR"|"USD"|"EUR"|"GBP";
+    },
+    sender:{
+        accountId:string;
+        name:string;
+    },
+    receiver:{
+        accountId:string;
+        name:string;
+    },
+    timestamp:string;
+    metadata:{
+        source:string;
+        referenceId:string;
+    }
+};
+
+let transaction1:transaction = {
+    transactionId: "TX5001",
+    type: "TRANSFER", // possible values: "CREDIT", "DEBIT", "TRANSFER"
+    amount: {
+        value: 10000,
+        currency: "INR" // possible values: "INR", "USD", "EUR", "GBP"
+    },
+    sender: {
+        accountId: "ACC101",
+        name: "Amit"
+    },
+    receiver: {
+        accountId: "ACC202",
+        name: "Rahul"
+    },
+    timestamp: "2026-10-23T10:30:00",
+    metadata: {
+        source: "Internet Banking",
+        referenceId: "REF1001"
+    }
+};
+cl(transaction1)
 
 // 48
-// let hrmsEmployee1 = {
-//     employeeId: "EMP1001",
-//     personalDetails: {
-//         firstName: "Amit",
-//         lastName: "Sharma",
-//         dateOfBirth: "1995-05-15",
-//         contact: {
-//             email: "amit@example.com",
-//             phone: "9876543210"
-//         },
-//         address: {
-//             current: "Pune, Maharashtra",
-//             permanent: "Udgir, Maharashtra"
-//         }
-    // },
-    // employmentDetails: {
-    //     department: "IT",
-    //     designation: "Software Developer",
-    //     joiningDate: "2025-01-10",
-    //     status: "ACTIVE", // possible values: "PROBATION", "ACTIVE", "NOTICE_PERIOD", "RESIGNED"
-    //     previousExperience: 2
-    // },
-    // compensation: {
-    //     annualCTC: 600000,
-    //     monthlyGross: 50000,
-    //     salaryComponents: [
-    //         { name: "Basic", amount: 25000 },
-    //         { name: "HRA", amount: 15000 },
-    //         { name: "Allowance", amount: 10000 }
-    //     ]
-    // },
-    // documents: [
-    //     {
-    //         documentType: "PAN",
-    //         fileName: "pan.pdf",
-    //         uploadedAt: "2025-01-10",
-    //         verified: true
-    //     },
-//         {
-//             documentType: "Degree Certificate",
-//             fileName: "degree.pdf",
-//             uploadedAt: "2025-01-10",
-//             verified: false
-//         }
-//     ]
-// };
+
+interface hrmsEmployee{
+    employeeId:string;
+    personalDetails:{
+        firstName:string;
+        lastName:string;
+        dateOfBirth:string;
+        contact:{
+            email:string;
+            phone:string;
+        },
+        address:{
+            current:string;
+            permanent:string;
+        }
+    },
+    employmentDetails:{
+        department:string;
+        designation:string;
+        joiningDate:string;
+        status:"PROBATION"|"ACTIVE"|"NOTICE_PERIOD"|"RESIGNED";
+        previousExperience:number;
+    },
+    compensation:{
+        annualCTC:number;
+        monthlyGross:number;
+        salaryComponents:[
+            {name:string, amount:number},
+            {name:string, amount:number},
+            {name:string, amount:number}
+        ]
+    },
+    documents:[
+        {
+            documentType:string;
+            fileName:string;
+            uploadedAt:string;
+            verified:boolean;
+        },
+        {
+            documentType:string;
+            fileName:string;
+            uploadedAt:string;
+            verified:boolean;
+        }
+    ]
+};
+
+let hrmsEmployee1:hrmsEmployee = {
+    employeeId: "EMP1001",
+    personalDetails: {
+        firstName: "Amit",
+        lastName: "Sharma",
+        dateOfBirth: "1995-05-15",
+        contact: {
+            email: "amit@example.com",
+            phone: "9876543210"
+        },
+        address: {
+            current: "Pune, Maharashtra",
+            permanent: "Udgir, Maharashtra"
+        }
+    },
+    employmentDetails: {
+        department: "IT",
+        designation: "Software Developer",
+        joiningDate: "2025-01-10",
+        status: "ACTIVE", // possible values: "PROBATION", "ACTIVE", "NOTICE_PERIOD", "RESIGNED"
+        previousExperience: 2
+    },
+    compensation: {
+        annualCTC: 600000,
+        monthlyGross: 50000,
+        salaryComponents: [
+            { name: "Basic", amount: 25000 },
+            { name: "HRA", amount: 15000 },
+            { name: "Allowance", amount: 10000 }
+        ]
+    },
+    documents: [
+        {
+            documentType: "PAN",
+            fileName: "pan.pdf",
+            uploadedAt: "2025-01-10",
+            verified: true
+        },
+        {
+            documentType: "Degree Certificate",
+            fileName: "degree.pdf",
+            uploadedAt: "2025-01-10",
+            verified: false
+        }
+    ]
+};
+cl(hrmsEmployee1)
 
 // 49
-// let batchReport1 = {
-//     batch: {
-//         batchId: 10,
-//         batchName: "Angular Evening",
-//         faculty: "Amit",
-//         students: [
-//             { studentId: 1, name: "Rahul", email: "rahul@example.com" },
-//             { studentId: 2, name: "Priya", email: "priya@example.com" }
-//         ]
-//     },
-//     test: {
-//         testId: 501,
-//         title: "TypeScript Interfaces",
-//         date: "2026-10-20",
-//         totalMarks: 100,
-//         technologies: ["TypeScript", "JavaScript"]
-//     },
-//     results: [
-//         {
-//             studentId: 1,
-//             attendance: "ATTENDED", // possible values: "ATTENDED", "ABSENT"
-//             score: 85,
-//             performance: "VERY_GOOD", // possible values: "VERY_POOR", "POOR", "GOOD", "VERY_GOOD", "EXCELLENT"
-//             codeCompleted: true,
-//             explainedToFaculty: true,
-//             feedback: "Good problem-solving"
-//         },
-//         {
-//             studentId: 2,
-//             attendance: "ABSENT",
-//             codeCompleted: false,
-//             explainedToFaculty: false
-//         }
-//     ],
-//     summary: {
-//         totalStudents: 2,
-//         attended: 1,
-//         absent: 1,
-//         averageScore: 85
-//     }
-// };
+
+interface batchReport{
+    batch:{
+        batchId:number;
+        batchName:string;
+        faculty:string;
+        students:{
+            studentId:number;
+            name:string;
+            email:string;
+        }[];
+    },
+    test:{
+        testId:number;
+        title:string;
+        date:string;
+        totalMarks:number;
+        technologies:string[];
+    }
+    results:[
+        {
+            studentId:1,
+            attendance:"ATTENDED"|"ABSENT"
+            score:number
+            performance:"VERY_POOR"|"POOR"|"GOOD"|"VERY_GOOD"|"EXCELLENT"
+            codeCompleted:boolean
+            explainedToFaculty:boolean
+            feedback:string
+        },
+        {
+            studentId:2,
+            attendance:string;
+            codeCompleted:boolean;
+            explainedToFaculty:boolean;
+        }
+    ],
+    summary:{
+        totalStudents:number;
+        attended:number;
+        absent:number;
+        averageScore:number;
+    }
+}
+let batchReport1:batchReport = {
+    batch: {
+        batchId: 10,
+        batchName: "Angular Evening",
+        faculty: "Amit",
+        students: [
+            { studentId: 1, name: "Rahul", email: "rahul@example.com" },
+            { studentId: 2, name: "Priya", email: "priya@example.com" }
+        ]
+    },
+    test: {
+        testId: 501,
+        title: "TypeScript Interfaces",
+        date: "2026-10-20",
+        totalMarks: 100,
+        technologies: ["TypeScript", "JavaScript"]
+    },
+    results: [
+        {
+            studentId: 1,
+            attendance: "ATTENDED", // possible values: "ATTENDED", "ABSENT"
+            score: 85,
+            performance: "VERY_GOOD", // possible values: "VERY_POOR", "POOR", "GOOD", "VERY_GOOD", "EXCELLENT"
+            codeCompleted: true,
+            explainedToFaculty: true,
+            feedback: "Good problem-solving"
+        },
+        {
+            studentId: 2,
+            attendance: "ABSENT",
+            codeCompleted: false,
+            explainedToFaculty: false
+        }
+    ],
+    summary: {
+        totalStudents: 2,
+        attended: 1,
+        absent: 1,
+        averageScore: 85
+    }
+};
+cl(batchReport1)
 
 // 50
-// let completeProduct1 = {
-//     id: "PRD1001",
-//     name: "Smart Watch",
-//     description: "Fitness tracking smart watch",
-//     category: {
-//         id: 10,
-//         name: "Electronics",
-//         parentCategory: "Wearables"
-//     },
-//     pricing: {
-//         basePrice: 5000,
-//         sellingPrice: 3999,
-//         taxPercentage: 18,
-//         currency: "INR", // possible values: "INR", "USD"
-//         discount: {
-//             type: "PERCENTAGE", // possible values: "PERCENTAGE", "FIXED"
-//             value: 20,
-//             validUntil: "2026-12-31"
-//         }
-//     },
-    // inventory: {
-    //     sku: "WATCH-BLK-001",
-    //     stock: 25,
-    //     warehouseId: 101,
-    //     status: "IN_STOCK" // possible values: "IN_STOCK", "LOW_STOCK", "OUT_OF_STOCK"
-    // },
-    // specifications: [
-    //     { name: "BatteryLife", value: "7 days" },
-    //     { name: "WaterResistant", value: true },
-    //     { name: "DisplaySize", value: 1.8 }
-    // ],
-    // variants: [
-    //     {
-    //         variantId: "VAR001",
-    //         color: "Black", // possible values: "Black", "Blue", "White"
-    //         priceAdjustment: 0,
-    //         available: true
-    //     },
-    //     {
-    //         variantId: "VAR002",
-    //         color: "Blue",
-    //         priceAdjustment: 200,
-    //         available: true
-    //     }
-//     ],
-//     shipping: {
-//         methods: ["STANDARD", "EXPRESS"], // possible values: "STANDARD", "EXPRESS", "SAME_DAY"
-//         returnable: true,
-//         returnDays: 7
-//     },
-//     reviews: [
-//         {
-//             userId: 201,
-//             rating: 5,
-//             comment: "Excellent product",
-//             date: "2026-10-20"
-//         },
-//         {
-//             userId: 202,
-//             rating: 4,
-//             date: "2026-10-21"
-//         }
-//     ],
-//     lifecycle: "ACTIVE" // possible values: "DRAFT", "ACTIVE", "DISCONTINUED"
-// };
+
+interface completeProduct{
+    id:string;
+    name:string;
+    description:string;
+    category:{
+        id:number;
+        name:string;
+        parentCategory:string;
+    },
+    pricing:{
+        basePrice:number;
+        sellingPrice:number;
+        taxPercentage:number;
+        currency:"INR"|"USD";
+        discount:{
+            type:"PERCENTAGE"|"FIXED";
+            value:number;
+            validUntil:string;
+        }
+    },
+    inventory:{
+        sku:string;
+        stock:number;
+        warehouseId:number;
+        status:"IN_STOCK"|"LOW_STOCK"|"OUT_OF_STOCK";
+    },
+    specifications:[
+        {name:string, value:string},
+        {name:string, value:boolean},
+        {name:string, value:number}
+    ],
+    variants:[
+        {
+            variantId:"VAR001";
+            color:"Black"|"Blue"|"White";
+            priceAdjustment:number;
+            available:boolean;
+        },
+        {
+            variantId:string;
+            color:string;
+            priceAdjustment:number;
+            available:boolean;
+        }
+    ],
+    shipping:{
+        methods:("STANDARD"|"EXPRESS"|"SAME_DAY")[];
+        returnable:boolean;
+        returnDays:number;
+    },
+    reviews:[
+        {
+            userId:number;
+            rating:number;
+            comment:string;
+            date:string;
+        },
+        {
+            userId:number;
+            rating:number;
+            date:string;
+        }
+    ],
+    lifecycle:"DRAFT"|"ACTIVE"|"DISCONTINUED"
+}
+
+let completeProduct1:completeProduct = {
+    id: "PRD1001",
+    name: "Smart Watch",
+    description: "Fitness tracking smart watch",
+    category: {
+        id: 10,
+        name: "Electronics",
+        parentCategory: "Wearables"
+    },
+    pricing: {
+        basePrice: 5000,
+        sellingPrice: 3999,
+        taxPercentage: 18,
+        currency: "INR", // possible values: "INR", "USD"
+        discount: {
+            type: "PERCENTAGE", // possible values: "PERCENTAGE", "FIXED"
+            value: 20,
+            validUntil: "2026-12-31"
+        }
+    },
+    inventory: {
+        sku: "WATCH-BLK-001",
+        stock: 25,
+        warehouseId: 101,
+        status: "IN_STOCK" // possible values: "IN_STOCK", "LOW_STOCK", "OUT_OF_STOCK"
+    },
+    specifications: [
+        { name: "BatteryLife", value: "7 days" },
+        { name: "WaterResistant", value: true },
+        { name: "DisplaySize", value: 1.8 }
+    ],
+    variants: [
+        {
+            variantId: "VAR001",
+            color: "Black", // possible values: "Black", "Blue", "White"
+            priceAdjustment: 0,
+            available: true
+        },
+        {
+            variantId: "VAR002",
+            color: "Blue",
+            priceAdjustment: 200,
+            available: true
+        }
+    ],
+    shipping: {
+        methods: ["STANDARD", "EXPRESS"], // possible values: "STANDARD", "EXPRESS", "SAME_DAY"
+        returnable: true,
+        returnDays: 7
+    },
+    reviews: [
+        {
+            userId: 201,
+            rating: 5,
+            comment: "Excellent product",
+            date: "2026-10-20"
+        },
+        {
+            userId: 202,
+            rating: 4,
+            date: "2026-10-21"
+        }
+    ],
+    lifecycle: "ACTIVE" // possible values: "DRAFT", "ACTIVE", "DISCONTINUED"
+};
+cl(completeProduct1)
